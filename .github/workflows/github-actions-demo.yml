@@ -18,7 +18,7 @@ jobs:
       - name: buld storybook
         run: npm run build:storybook
       - name: run e2e tests
-        run: npm test:e2e
+        run: npm run test:e2e
       - name: run lint checks
         run: npm run lint
       - name: run i18n translations check
