@@ -4,6 +4,8 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    matrix:
+      node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v5
