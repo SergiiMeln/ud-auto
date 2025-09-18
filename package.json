@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:storybook": "node ./scripts/storybook.js",
+    "test:e2e": "node ./scripts/e2e.test.js",
+    "lint": "node ./scripts/eslint.js",
+    "i18n:check": "node ./scripts/i18n-check.js"
   },
-  "author": "Sergii Melnychenko <sergii.melnychenko@epicgames.com>",
+  "author": "Sergii Meln",
   "license": "ISC",
   "description": "Auto Sandbox",
   "dependencies": {
