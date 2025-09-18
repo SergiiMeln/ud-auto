@@ -16,7 +16,7 @@ jobs:
       - name: install modules
         run: npm install
       - name: install browsers
-        run: npm playwright install
+        run: npm run playwright install
       - name: buld storybook
         run: npm run build:storybook
       - name: run e2e tests
