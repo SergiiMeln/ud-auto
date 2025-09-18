@@ -15,10 +15,8 @@ jobs:
           node-version: ${{matrix.node-version}}
       - name: install modules
         run: npm install
-      - name: install playwright
-        run: npm run @playwright/test
       - name: install browsers
-        run: npm run playwright install
+        run: npm playwright install
       - name: buld storybook
         run: npm run build:storybook
       - name: run e2e tests
