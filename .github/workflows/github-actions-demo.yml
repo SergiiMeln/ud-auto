@@ -4,11 +4,13 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v5
+      - name: Starting Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v5
         with:
-          node-version: lts/*
+          node-version: ${{matrix.node-version}}
       - name: install dependencies
         run: npm ci
       - name: buld storybook
