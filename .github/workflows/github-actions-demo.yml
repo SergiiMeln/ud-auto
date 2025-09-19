@@ -25,6 +25,6 @@ jobs:
       - name: run i18n translations check
         run: npm run i18n:check
       - name: install PW browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install --with-deps chromium
       - name: run basic tests
-        run: npx playwright test
+        run: npx playwright test --browser=chrome
