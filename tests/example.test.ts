@@ -39,5 +39,5 @@ test("Test Assertions", async ({ page }) => {
   await expect(pageTitle).toHaveText("Example Domain");
   await expect(pageTitle).toHaveCount(1);
 
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(2000);
 });
