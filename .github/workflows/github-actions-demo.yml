@@ -27,4 +27,4 @@ jobs:
       - name: install PW browsers
         run: npx playwright install --with-deps chromium
       - name: run basic tests
-        run: npx playwright test --config=playwright.config.ts --project=chrome --verbose
+        run: npx playwright test --config=playwright.config.ts --project=chrome -- --verbose
