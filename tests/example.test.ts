@@ -20,7 +20,7 @@ test("Test Assertions @Smoke", async ({ page }) => {
   await page.waitForTimeout(2000);
 });
 
-test.describe.only("Test Set @Regression", () => {
+test.describe("Test Set @Regression", () => {
   test("Working with Inputs", async ({ page }) => {
     await page.goto("http://zero.webappsecurity.com/");
     await page.click("#signin_button");
@@ -41,5 +41,19 @@ test.describe.only("Test Set @Regression", () => {
     const errMsg = page.locator(".alert-error");
     await expect(errMsg).toContainText("Login and/or password are wrong.");
     await page.waitForTimeout(3000);
+  });
+});
+
+test.describe.only("Screenshots", () => {
+  test("Whole page screenshot", async ({ page }) => {
+    await page.goto("http://zero.webappsecurity.com/");
+    await page.click("#signin_button");
+    await page.screenshot({ path: "screenshot.png", fullPage: true });
+  });
+  test("Screenshot of an element", async ({ page }) => {
+    await page.goto("http://zero.webappsecurity.com/");
+    await page.click("#signin_button");
+    const signInButton = page.getByText("Sign in");
+    await signInButton.screenshot({ path: "buttonScreenshot.png" });
   });
 });
