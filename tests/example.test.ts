@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-test("Base Test Example", async ({ page }) => {
+test("Base Test Example @Smoke", async ({ page }) => {
   await page.goto("https://www.example.com");
   const pageTitle = page.locator("h1");
   await expect(pageTitle).toContainText("Example Domain");
   await page.waitForTimeout(3000);
 });
 
-test.only("Test Assertions", async ({ page }) => {
+test("Test Assertions @Smoke", async ({ page }) => {
   await page.goto("https://www.example.com");
   await expect(page).toHaveURL("https://www.example.com");
   await expect(page).toHaveTitle("Example Domain");
@@ -20,7 +20,7 @@ test.only("Test Assertions", async ({ page }) => {
   await page.waitForTimeout(2000);
 });
 
-test.describe.only("Test Set", () => {
+test.describe.only("Test Set @Regression", () => {
   test("Working with Inputs", async ({ page }) => {
     await page.goto("http://zero.webappsecurity.com/");
     await page.click("#signin_button");
