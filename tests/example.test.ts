@@ -54,11 +54,16 @@ test.describe.only("Screenshots", () => {
 
   test("Whole page screenshot", async ({ page }) => {
     //await page.click("#signin_button");
-    await page.screenshot({ path: "screenshot.png", fullPage: true });
+    await page.screenshot({
+      path: "./screenshots/screenshot.png",
+      fullPage: true,
+    });
   });
   test("Screenshot of an element", async ({ page }) => {
     //await page.click("#signin_button");
     const signInButton = page.getByText("Sign in");
-    await signInButton.screenshot({ path: "buttonScreenshot.png" });
+    await signInButton.screenshot({
+      path: "./screenshots/buttonScreenshot.png",
+    });
   });
 });
