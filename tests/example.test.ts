@@ -45,10 +45,11 @@ test.describe("Test Set @Regression", () => {
   });
 });
 
-test.describe.only("Screenshots", () => {
+test.describe("Screenshots", () => {
   test.beforeEach(async ({ page }) => {
     //await page.goto("http://zero.webappsecurity.com/");
     await helpers.loadHomepage(page);
+    await page.pause();
     await helpers.assertTitle(page);
   });
 
@@ -66,4 +67,9 @@ test.describe.only("Screenshots", () => {
       path: "./screenshots/buttonScreenshot.png",
     });
   });
+});
+
+test.only("Debbuging Test", async ({ page }) => {
+  //await page.pause();
+  await helpers.getLoginError(page);
 });
