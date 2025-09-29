@@ -7,8 +7,8 @@
     "test:e2e": "node ./scripts/e2e.test.js",
     "lint": "node ./scripts/eslint.js",
     "i18n:check": "node ./scripts/i18n-check.js",
-    "tests:chrome": "playwright test --config=playwright.config.ts --project=chrome",
-    "tests:e2e": "playwright test --config=e2e.config.ts --project=chrome"
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=chrome --reporter=list",
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=chrome --reporter=list"
   },
   "author": "Sergii Meln",
   "license": "ISC",

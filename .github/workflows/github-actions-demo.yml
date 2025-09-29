@@ -25,6 +25,6 @@ jobs:
       - name: install PW browsers
         run: npx playwright install --with-deps chromium
       - name: run default tests on chrome
-        run: npm run tests:chrome --reporter=list
+        run: npm run tests:chrome
       - name: run automated e2e tests
-        run: npm run tests:e2e --reporter=list
+        run: npm run tests:e2e
