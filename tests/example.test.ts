@@ -21,7 +21,7 @@ test("Test Assertions @Smoke", async ({ page }) => {
   await page.waitForTimeout(2000);
 });
 
-test.describe("Test Set @Regression", () => {
+test.describe.parallel("Test Set @Regression", () => {
   test("Working with Inputs", async ({ page }) => {
     await page.goto("http://zero.webappsecurity.com/");
     await page.click("#signin_button");
@@ -49,7 +49,6 @@ test.describe("Screenshots", () => {
   test.beforeEach(async ({ page }) => {
     //await page.goto("http://zero.webappsecurity.com/");
     await helpers.loadHomepage(page);
-    await page.pause();
     await helpers.assertTitle(page);
   });
 
@@ -69,7 +68,7 @@ test.describe("Screenshots", () => {
   });
 });
 
-test.only("Debbuging Test", async ({ page }) => {
+test("Debbuging Test", async ({ page }) => {
   //await page.pause();
   await helpers.getLoginError(page);
 });
