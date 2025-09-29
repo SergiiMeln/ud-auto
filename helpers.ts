@@ -13,7 +13,6 @@ export async function assertTitle(page: Page) {
 
 export async function getLoginError(page: Page) {
   await page.goto("http://zero.webappsecurity.com/");
-  await page.pause();
   await page.click("#signin_button");
   await page.fill("#user_login", "my-username");
   await page.fill("#user_password", "password");

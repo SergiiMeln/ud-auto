@@ -68,7 +68,7 @@ test.describe("Screenshots", () => {
   });
 });
 
-test("Debbuging Test", async ({ page }) => {
+test.only("Debbuging Test", async ({ page }) => {
   //await page.pause();
   await helpers.getLoginError(page);
 });
