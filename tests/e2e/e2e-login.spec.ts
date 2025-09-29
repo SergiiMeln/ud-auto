@@ -28,7 +28,7 @@ test.describe("Login/Logout Flow", () => {
   });
 
   //positive scenario + logout
-  test.only("Success Login test", async ({ page }) => {
+  test("Success Login test", async ({ page }) => {
     await page.click("#signin_button");
     await page.fill("#user_login", "username");
     await page.fill("#user_password", "password");
